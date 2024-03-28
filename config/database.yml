@@ -79,6 +79,7 @@ test:
 #
 production:
   <<: *default
-  database: real_time_search_analytics_app_production
-  username: real_time_search_analytics_app
-  password: <%= ENV["REAL_TIME_SEARCH_ANALYTICS_APP_DATABASE_PASSWORD"] %>
+  url: <%= ENV['DATABASE_URL'] %>
+  database: search_engine_561u
+  username: kedro
+  password: <%= ENV['MY_APP_RENDER_DATABASE_PASSWORD'] %>
