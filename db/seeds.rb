@@ -7,3 +7,25 @@
 #   ["Action", "Comedy", "Drama", "Horror"].each do |genre_name|
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
+Article.destroy_all
+Article.create!([{
+  title: "Article title one",
+  content: "This body of an article",
+  author: "Kedro",
+},
+{
+  title: "Article title two",
+  content: "This body of an article",
+  author: "Abraha",
+},
+{
+  title: "Article title three",
+  content: "This body of an article",
+  author: "Weleyesus",
+},
+{
+  title: "Article title 4",
+  content: "This body of an article",
+  author: "Teberh",
+}])
+p "Created #{Article.count} Articles"
