@@ -27,7 +27,7 @@ class SearchController < ApplicationController
         query = params[:query].strip # Remove leading and trailing whitespaces
         complete = text_complete?(query)
         # Check if the query is complete and sufficiently long
-        if query.present? && query.match?(/\w{3,}/) && complete
+        if query.present? && query.match?(/\w{3,}/)
              
             # Increment count attribute of the search
             search = SearchLog.find_or_initialize_by(user_ip: request.remote_ip, text: query)
